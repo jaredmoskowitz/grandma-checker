@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Grandma URL Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <link media="screen" rel="stylesheet" href="/assets/colorbox.css" />
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <script type='text/javascript'>
+        function analyze(key)
+        {
+            if(key.keyCode == 13 || key == 1){
+                var start = new Date().getTime();
+                for (var i = 0; i < 1e7; i++) {
+                    if ((new Date().getTime() - start) > 300){
+                        break;
+                    }
+                }
+            var n = Math.floor((Math.random()*11)+1);
+            switch(n)
+            {
+                case 1:
+                    alert("Nope.");
+                    break;
+                case 2:
+                    alert("No way in hell.");
+                    break;
+                case 3:
+                    alert("Not a chance.");
+                    break;
+                case 4:
+                    alert("Just...stop");
+                    break;
+                case 5:
+                    alert("What? No.");
+                    break;
+                case 6:
+                    alert("No sir.");
+                    break;
+                case 7:
+                    alert("I would say no.");
+                    break;
+                case 8:
+                    alert("Oh hell no.");
+                    break;
+                case 9:
+                    alert("Yes! ...Just kidding.");
+                    break;
+                case 10:
+                    alert("hahaha... no.");
+                    break;
+                case 11:
+                    alert("Not sure...  try again!");
+                    break;
+                default:
+                    alert("No.");
+            }
+          }
+        }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- Default input -->
+        <p data-toggle="tooltip" title="Tooltip copy">Enter URL to check whether an ad is safe to click</p>
+        <input id='textfield' onkeypress="return analyze(event)" type="text" placeholder="Enter URL to check whether an ad is safe to click" class="form-control" />
+        <br>
+        <center><button id='butt' onClick='analyze(1)' class="btn btn-hg btn-primary">
+        Is this ad safe to click?
+    </button></center>
+    </div>
+    <!-- /.container -->
+
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+    <script src="js/flatui-checkbox.js"></script>
+    <script src="js/flatui-radio.js"></script>
+    <script src="js/jquery.tagsinput.js"></script>
+    <script src="js/jquery.placeholder.js"></script>
+  </body>
+</html>
